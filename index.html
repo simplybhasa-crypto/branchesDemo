@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f6f1">
+    <title>Daily Five</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="wordmark" href="./" aria-label="Daily Five home">
+        <span class="wordmark-icon" aria-hidden="true">5</span>
+        <span>DAILY FIVE</span>
+      </a>
+      <span class="edition"><span class="live-dot" aria-hidden="true"></span> THE DAILY WORD GAME</span>
+    </header>
+
+    <main class="game-shell">
+      <section class="play-area" aria-labelledby="game-title">
+        <div class="intro">
+          <p class="eyebrow" id="today-label">TODAY'S PUZZLE</p>
+          <h1 id="game-title">Five letters.<br><span>Five chances.</span></h1>
+          <p class="dek">Find the word of the day, one guess at a time.</p>
+        </div>
+
+        <div class="board" id="board" role="grid" aria-label="Five guesses, five letters each"></div>
+
+        <p class="message" id="message" role="status" aria-live="polite">Type a five-letter word to begin.</p>
+
+        <div class="keyboard" id="keyboard" aria-label="On-screen keyboard"></div>
+      </section>
+
+      <aside class="side-panel" aria-label="How to play">
+        <div class="daily-stamp">
+          <span class="stamp-number">05</span>
+          <span class="stamp-caption">GUESSES<br>AVAILABLE</span>
+        </div>
+
+        <div class="how-to">
+          <h2>How to play</h2>
+          <p>Guess the five-letter word in five tries. After each guess, the tiles show how close you are.</p>
+          <ul class="legend">
+            <li><span class="legend-tile correct" aria-hidden="true">A</span><span><strong>Right letter, right place</strong><br>That letter is locked in.</span></li>
+            <li><span class="legend-tile present" aria-hidden="true">R</span><span><strong>Right letter, wrong place</strong><br>Try it somewhere else.</span></li>
+            <li><span class="legend-tile absent" aria-hidden="true">T</span><span><strong>Not in the word</strong><br>Leave it out next time.</span></li>
+          </ul>
+        </div>
+
+        <footer class="panel-footer">
+          <span>ONE WORD. EVERY DAY.</span>
+          <span id="date-display"></span>
+        </footer>
+      </aside>
+    </main>
+  </body>
+</html>
